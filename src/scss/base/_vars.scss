@@ -1,0 +1,20 @@
+:root {
+  --container-width: 1336px;
+  --container-padding: 15px;
+
+  --second-family: "Michroma";
+
+  --page-bg: #fff;
+  --text-color: #000;
+  --accent: #3040d3;
+  --link-color: #010410;
+
+  --laptop-size: 1199px;
+  --tablet-size: 959px;
+  --mobile-size: 599px;
+}
+
+.dark {
+  --page-bg: #252526;
+  --text-color: #fff;
+}

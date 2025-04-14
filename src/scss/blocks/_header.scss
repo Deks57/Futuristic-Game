@@ -1,0 +1,24 @@
+.header {
+  padding: rem(24) 0 rem(16);
+  border-bottom: rem(2) solid #000;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    column-gap: rem(24);
+  }
+}
+
+.header__nav {
+  @include tablet {
+    display: none;
+  }
+}

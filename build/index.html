@@ -13,7 +13,7 @@
 
 	<body>
 		<header class="header">
-			<div class="container">
+			<div class="container-average">
 				<div class="header__row">
 					<img src="./img/logo.svg" width="237" height="40" alt="" />
 					<nav class="header__nav nav">
@@ -33,6 +33,7 @@
 					<button class="mobile-nav-btn"></button>
 				</div>
 			</div>
+			<img src="./img/header-line.svg" alt="" class="header-line" />
 		</header>
 		<div class="mobile-nav">
 			<ul class="mobile-nav__list">
@@ -86,34 +87,39 @@
 					</p>
 					<div class="information__body">
 						<div class="information__cards">
-							<div class="information__card information__card-1">
-								<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
-								<div class="information__card-title title-4">
-									Intense Survival Gameplay
+							<div class="information__cards-left">
+								<div class="information__card">
+									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<div class="information__card-title title-4">
+										Intense Survival Gameplay
+									</div>
+									<div class="information__card-desc title-6">
+										Test your skills and instincts as&#160;you navigate through hostile environments, scavenge for resources, and make crucial choices to survive
+										in&#160;a&#160;world on&#160;the brink of&#160;collapse.
+									</div>
 								</div>
-								<div class="information__card-desc title-6">
-									Test your skills and instincts as&#160;you navigate through hostile environments, scavenge for resources, and make crucial choices to survive
-									in&#160;a&#160;world on&#160;the brink of&#160;collapse.
+								<div class="information__card">
+									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<div class="information__card-title title-4">
+										Tactical Combat and Customization
+									</div>
+									<div class="information__card-desc title-6">
+										Engage in&#160;adrenaline-pumping combat encounters, utilizing a&#160;range of&#160;futuristic weapons, gadgets, and abilities. Customize your
+										play style, strategize your approach, and outmaneuver enemies for tactical advantage.
+									</div>
 								</div>
 							</div>
-							<div class="information__card information__card-2">
-								<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
-								<div class="information__card-title title-4">
-									Intense Survival Gameplay
-								</div>
-								<div class="information__card-desc title-6">
-									Test your skills and instincts as&#160;you navigate through hostile environments, scavenge for resources, and make crucial choices to survive
-									in&#160;a&#160;world on&#160;the brink of&#160;collapse.
-								</div>
-							</div>
-							<div class="information__card information__card-3">
-								<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
-								<div class="information__card-title title-4">
-									Intense Survival Gameplay
-								</div>
-								<div class="information__card-desc title-6">
-									Test your skills and instincts as&#160;you navigate through hostile environments, scavenge for resources, and make crucial choices to survive
-									in&#160;a&#160;world on&#160;the brink of&#160;collapse.
+							<div class="information__cards-right">
+								<img loading="lazy" src="./img/information-img.png" class="image" width=685" height="888" alt="" />
+								<div class="information__card">
+									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<div class="information__card-title title-4">
+										Cooperative Multiplayer
+									</div>
+									<div class="information__card-desc title-6">
+										Join forces with friends or&#160;other players in&#160;cooperative multiplayer mode. Tackle challenging missions together, coordinate
+										strategies, and combine your unique abilities.
+									</div>
 								</div>
 							</div>
 						</div>
@@ -182,15 +188,213 @@
 				</div>
 			</section>
 			<section class="prise">
-				<div class="container">
+				<div class="container-prise">
 					<h1 class="title-2">Invest in&#160;Your Survival: Pricing Tiers</h1>
+					<p class="title-3">
+						Explore Our Pricing Options Tailored to&#160;Your Gameplay Goals and Preferences
+					</p>
+					<div class="prise__buttons">
+						<button class="prise__button prise__button-blue">
+							Monthly Billing
+						</button>
+						<button class="prise__button prise__button-white">
+							Annual Billing
+						</button>
+					</div>
+					<div class="prise__cards">
+						<div class="prise__card">
+							<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+							<div class="prise__card-top">
+								<h3 class="prise__card-title">Basic Plan</h3>
+								<div class="prise__card-info">
+									Survivor&#8217;s Starter Pack
+								</div>
+							</div>
+							<div class="prise__card-prise">$29.99/mo</div>
+							<button class="button-blue">Buy Game</button>
+							<nav class="prise__card-nav">
+								<ul class="prise__card-list">
+									<li class="prise__card-item">
+										Access to&#160;the full game with all core features.
+									</li>
+									<li class="prise__card-item">Single-player mode available.</li>
+									<li class="prise__card-item">
+										Limited selection of&#160;character customization options.
+									</li>
+									<li class="prise__card-item">
+										Exclusive in-game items: &#171;Rookie&#8217;s Rations&#187; supply pack.
+									</li>
+									<li class="prise__card-item">Feature text goes here</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="accordions">
+				<div class="container-small">
+					<div class="accordions__top">
+						<h1 class="accordions__title title-2">
+							Unveiling Clarity: Your Questions Answered
+						</h1>
+						<p class="title-3">
+							Navigate Through Frequently Asked Questions to&#160;Enhance Your Understanding of&#160;Shadowfall Chronicles
+						</p>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion">
+							<details class="accordion__details" name="faq">
+								<summary class="accordion__summary">
+									<h4 class="accordion__title">
+										<span aria-details="faq-1">Is&#160;&#171;Shadowfall Chronicles&#187; a&#160;single-player or&#160;multiplayer game?</span>
+									</h4>
+								</summary>
+							</details>
+							<div class="accordion__content" id="faq-1">
+								<div class="accordion__content-inner">
+									<div class="accordion__content-body">
+										<p>
+											AI&#160;stands for Artificial Intelligence, which refers to&#160;the simulation of&#160;human intelligence in&#160;machines.
+											It&#160;enables them to perform tasks like problem-solving, learning, and decision-making.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<details class="accordion__details" name="faq">
+								<summary class="accordion__summary">
+									<h4 class="accordion__title">
+										<span aria-details="faq-2">What sets the factions apart, and can I&#160;switch between them?</span>
+									</h4>
+								</summary>
+							</details>
+							<div class="accordion__content" id="faq-2">
+								<div class="accordion__content-inner">
+									<div class="accordion__content-body">
+										<p>
+											AI&#160;stands for Artificial Intelligence, which refers to&#160;the simulation of&#160;human intelligence in&#160;machines.
+											It&#160;enables them to perform tasks like problem-solving, learning, and decision-making.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<details class="accordion__details" name="faq">
+								<summary class="accordion__summary">
+									<h4 class="accordion__title">
+										<span aria-details="faq-3">How does the crafting system work in&#160;the game?</span>
+									</h4>
+								</summary>
+							</details>
+							<div class="accordion__content" id="faq-3">
+								<div class="accordion__content-inner">
+									<div class="accordion__content-body">
+										<p>
+											AI&#160;stands for Artificial Intelligence, which refers to&#160;the simulation of&#160;human intelligence in&#160;machines.
+											It&#160;enables them to perform tasks like problem-solving, learning, and decision-making.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<details class="accordion__details" name="faq">
+								<summary class="accordion__summary">
+									<h4 class="accordion__title">
+										<span aria-details="faq-4">Will my&#160;decisions affect the game&#8217;s outcome, and are there multiple endings?</span>
+									</h4>
+								</summary>
+							</details>
+							<div class="accordion__content" id="faq-4">
+								<div class="accordion__content-inner">
+									<div class="accordion__content-body">
+										<p>
+											AI&#160;stands for Artificial Intelligence, which refers to&#160;the simulation of&#160;human intelligence in&#160;machines.
+											It&#160;enables them to perform tasks like problem-solving, learning, and decision-making.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<details class="accordion__details" name="faq">
+								<summary class="accordion__summary">
+									<h4 class="accordion__title">
+										<span aria-details="faq-5">Will my&#160;decisions affect the game&#8217;s outcome, and are there multiple endings?</span>
+									</h4>
+								</summary>
+							</details>
+							<div class="accordion__content" id="faq-5">
+								<div class="accordion__content-inner">
+									<div class="accordion__content-body">
+										<p>
+											AI&#160;stands for Artificial Intelligence, which refers to&#160;the simulation of&#160;human intelligence in&#160;machines.
+											It&#160;enables them to perform tasks like problem-solving, learning, and decision-making.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordions__bottom">
+						<h2>Still have a&#160;question?</h2>
+						<p>Feel free to&#160;reach out for clarifications and inquiries.</p>
+						<button class="button-blue">Contact Us</button>
+					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="container">
-				<div class="footer__copyright">
-					<p>Сборка сделана в&#160;школе <a href="https://webcademy.ru" target="_blank">webcademy.ru</a></p>
+			<div class="container-average">
+				<div class="footer__row">
+					<div class="footer__logo">
+						<img loading="lazy" src="./img/logo.svg" class="image" width="200" height="25" alt="footer-logo" />
+						<h1 class="title-5">
+							Experience the game that will change your the way you play.
+						</h1>
+					</div>
+					<div class="footer__form">
+						<h2 class="title-5">
+							Subscribe to&#160;stay tuned for latest updates. Let&#8217;s do&#160;it!
+						</h2>
+						<form>
+							<input type="email" placeholder="Enter your email Address" />
+							<button class="button-white">
+								Subscribe
+							</button>
+						</form>
+					</div>
+					<div class="footer__follow">
+						<h3 class="title-6">Follow Us</h3>
+						<div class="footer__follow-images">
+							<div class="footer__follow-img">
+								<img loading="lazy" src="./img/instagram.svg" class="image" width="16" height="16" alt="instagram" />
+							</div>
+							<div class="footer__follow-img">
+								<img loading="lazy" src="./img/faceboock.svg" class="image" width="9" height="16" alt="instagram" />
+							</div>
+							<div class="footer__follow-img">
+								<img loading="lazy" src="./img/twitter.svg" class="image" width="16" height="13" alt="instagram" />
+							</div>
+						</div>
+					</div>
+					<div class="footer__feedback">
+						<h3 class="title-6">Contact Us</h3>
+						<h3 class="title-6">+1 800 854-36-80</h3>
+					</div>
+				</div>
+				<div class="footer__sos1al">
+					<div class="footer__sos1al-info">&#169; 2023 All Rights Reserved</div>
+					<ul class="footer__sos1al-list">
+						<li class="footer__sos1al-item">Privacy Policy</li>
+						<li class="footer__sos1al-item">Terms of&#160;Use</li>
+						<li class="footer__sos1al-item">Sales and Refunds</li>
+						<li class="footer__sos1al-item">Legal</li>
+						<li class="footer__sos1al-item">Site Map</li>
+					</ul>
 				</div>
 			</div>
 		</footer>

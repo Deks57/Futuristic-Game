@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(./../../img/bg-logo.svg);
+  background-image: url(./../img/bg-logo.svg);
   background-repeat: no-repeat;
   background-position: 50% 0%;
   margin: rem(60) 0 rem(100);
@@ -29,41 +29,32 @@
   }
 
   &__card {
-    // border: rem(2) solid #3040d3;
-    // padding: rem(40) rem(45) rem(15);
+    // border-image: url(./../../img/border-card.svg);
+    border: 2px solid var(--accent);
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    clip-path: polygon(10% 0, 100% 0, 100% 85%, 90% 100%, 0 100%, 0 15%);
+    padding: rem(40) rem(35) rem(90);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: rem(230);
+    // height: rem(230);
+    position: relative;
+  }
 
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: rem(2) solid #3040d3;
-    }
-    &:before {
-      grid-row: 1 / 2;
-      border-right: none;
-      border-bottom: none;
-    }
-    &:after {
-      grid-row: 1 / span 2;
-      border-left: none;
-    }
+  &__buttons {
+    display: flex;
+    column-gap: rem(20);
   }
 }
 
 .card__desc {
-  padding: rem(24) 0 rem(42);
+  padding: rem(24) 0 0;
   text-align: center;
 }
 
 .card__arrow {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
   margin-top: auto;
   align-self: flex-end;
 }

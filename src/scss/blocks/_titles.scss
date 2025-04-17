@@ -1,15 +1,16 @@
 .title-1,
 h1 {
   @include fluid-text(48, 24);
-  font-weight: 400;
   font-family: var(--second-family);
+  line-height: 150%;
+  letter-spacing: 0.01em;
 }
 
 .title-2,
 h2 {
   font-family: var(--second-family);
   font-weight: 400;
-  @include fluid-text(40, 18);
+  @include fluid-text(40, 28);
   line-height: 150%;
   letter-spacing: 0.01em;
   color: #3140d3;

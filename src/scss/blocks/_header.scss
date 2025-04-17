@@ -1,7 +1,8 @@
 .header {
   padding: rem(24) 0 rem(16);
-  border-bottom: rem(2) solid #000;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(16);
 
   &__row {
     display: flex;

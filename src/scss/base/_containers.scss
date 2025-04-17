@@ -12,6 +12,27 @@
   max-width: 100%;
 }
 
+.container-small {
+  padding: 0 var(--container-padding);
+  max-width: rem(900);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-average {
+  padding: 0 var(--container-padding);
+  max-width: rem(1310);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-prise {
+  padding: 0 var(--container-padding);
+  max-width: rem(1100);
+  width: 100%;
+  margin: 0 auto;
+}
+
 .container-left-50 {
   padding: 0 var(--container-padding);
   max-width: 50%;

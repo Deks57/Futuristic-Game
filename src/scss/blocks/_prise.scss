@@ -4,19 +4,55 @@
     text-align: center;
   }
 
+  &__cards {
+    display: flex;
+    column-gap: rem(20);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(20);
+    }
+  }
+
   &__card {
-    // background-image: url("./.././../img/border-card.svg");
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    padding: rem(32);
-    width: 549px;
-    height: 814px;
+    padding: fluid(32, 16);
     border: 2px solid var(--accent);
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    row-gap: rem(32);
+    row-gap: fluid(32, 16);
     align-items: center;
+    max-width: rem(535);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #3040d3;
+      border-left: 1px solid #3040d3;
+      width: 120px;
+      height: 165px;
+      right: 2%;
+      top: 2%;
+      transform: rotate(-180deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #3040d3;
+      border-left: 1px solid #3040d3;
+      width: 120px;
+      height: 165px;
+      left: 2%;
+      bottom: 2%;
+      transition: bottom ease 0.5s;
+    }
+
+    &-top {
+      text-align: center;
+    }
 
     & button {
       width: 100%;
@@ -28,24 +64,55 @@
     }
 
     &-prise {
-      font-weight: 400;
       @include fluid-text(40, 28);
       line-height: 150%;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(16);
+
+      & li {
+        font-family: var(--font-family);
+        @include fluid-text(18, 14);
+        line-height: 150%;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(10);
+
+        &::before {
+          content: "";
+          flex-shrink: 0;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url(./../../img/check.svg);
+          width: fluid(24, 18);
+          height: fluid(24, 18);
+        }
+      }
     }
   }
 
   &__buttons {
     display: flex;
     justify-content: center;
-    margin-block: rem(80);
+    margin-block: fluid(80, 20);
   }
 
   &__button {
-    padding: 12px 24px;
+    padding: fluid(12, 8) fluid(24, 10);
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 21px;
+    @include fluid-text(21, 14);
     line-height: 150%;
+    transition: all 0.35s;
+
+    &:hover {
+      transform: translateY(-0.25em);
+      box-shadow: 0 4px 12px 0 #262f81;
+    }
 
     &-blue {
       color: #fff;

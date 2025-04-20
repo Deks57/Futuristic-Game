@@ -1,21 +1,74 @@
 .legends {
   text-align: center;
-  margin-block: rem(120);
+  margin-block: fluid(120, 35);
 
   &__cards {
-    display: grid;
-    grid-template: repeat(10, 139px) / repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     column-gap: rem(20);
     width: 100%;
-    margin-top: rem(80);
+    margin-top: fluid(80, 20);
+    height: fluid(1355, 800);
+
+    @media (max-width: 1150px) {
+      & {
+        height: auto;
+        flex-wrap: wrap;
+        row-gap: rem(20);
+      }
+    }
+
+    &-last {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      @media (max-width: 1150px) {
+        & {
+          display: contents;
+        }
+      }
+    }
   }
+
   &__card {
     border: 2px solid #3040d3;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    max-width: fluid(422, 222);
-    padding: rem(16) rem(24) rem(40);
+    padding: fluid(16, 12) fluid(24, 16) fluid(40, 20);
     height: fit-content;
-    max-width: 424px;
+    width: fluid(424, 248);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 1px dashed #3040d3;
+      border-left: 3px dashed #3040d3;
+      width: 95px;
+      height: 95px;
+      right: 1.5%;
+      top: 1.5%;
+      transform: rotate(-180deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 1px dashed #3040d3;
+      border-left: 3px dashed #3040d3;
+      width: 95px;
+      height: 95px;
+      left: 1.5%;
+      bottom: 1.5%;
+    }
+
+    &-img {
+      width: 100%;
+      // width: fluid(374, 250);
+      height: fluid(422, 294);
+    }
 
     &-title {
       font-family: var(--font-family);
@@ -26,39 +79,4 @@
       margin-top: rem(40);
     }
   }
-}
-
-.legends__card-1 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
-
-.legends__card-2 {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
-
-.legends__card-3 {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 4;
-  grid-row-end: 7;
-}
-
-.legends__card-4 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 7;
-  grid-row-end: 10;
-}
-
-.legends__card-5 {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 7;
-  grid-row-end: 10;
 }

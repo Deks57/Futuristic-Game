@@ -1,11 +1,23 @@
 .footer {
   background-color: var(--accent);
-  padding: rem(100) 0 rem(60);
+  padding: fluid(100, 30) 0 fluid(60, 10);
+  font-family: var(--font-family);
 
   &__row {
-    display: flex;
-    column-gap: rem(90);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: fluid(90, 20);
     align-items: start;
+
+    @media (max-width: 1110px) {
+      grid-template-columns: repeat(2, auto);
+      row-gap: rem(30);
+    }
+
+    @include mobile {
+      grid-template-columns: auto;
+      justify-content: center;
+    }
   }
 
   &__logo img {
@@ -13,9 +25,15 @@
   }
 
   &__form form {
-    margin-top: rem(28);
-    display: flex;
+    margin-top: fluid(28, 10);
+    display: grid;
+    grid-template-columns: 1fr auto;
     column-gap: rem(16);
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+      row-gap: rem(10);
+    }
   }
   & input {
     box-shadow: 0 8px 24px -4px rgba(255, 255, 255, 0.08),
@@ -51,6 +69,22 @@
     flex-direction: column;
     row-gap: rem(10);
     color: #fff;
+
+    &-number {
+      font-family: var(--font-family);
+      font-weight: 400;
+      @include fluid-text(16, 14);
+      line-height: 120%;
+      color: #fff;
+    }
+  }
+
+  &__feedbacks {
+    display: flex;
+    justify-content: space-between;
+    @include mobile-above {
+      display: contents;
+    }
   }
 
   & .title-5,
@@ -58,18 +92,35 @@
     filter: invert(1);
   }
 
+  & .title-6 {
+    font-family: var(--second-family);
+  }
+
   &__sos1al {
     filter: invert(1);
-    margin-top: rem(90);
-    padding-top: rem(30);
+    margin-top: fluid(90, 20);
+    padding-top: fluid(30, 10);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
+    border-top: 1px solid #000;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      row-gap: rem(15);
+    }
+
+    &-info {
+      font-size: 12px;
+    }
 
     &-list {
       display: flex;
-      column-gap: rem(40);
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: fluid(40, 15);
+      row-gap: rem(10);
     }
 
     &-item {

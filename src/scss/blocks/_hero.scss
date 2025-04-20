@@ -2,42 +2,90 @@
   background-image: url(./../img/bg-logo.svg);
   background-repeat: no-repeat;
   background-position: 50% 0%;
-  margin: rem(60) 0 rem(100);
+  margin: fluid(60, 20) 0 fluid(100, 35);
+  // background-size: contain;
   &__body {
     display: grid;
-    grid-template-columns: rem(720) auto;
+    grid-template-columns: 1fr auto;
     align-items: center;
+    // column-gap: rem(10);
+
+    @include tablet {
+      display: block;
+    }
+
+    &-left {
+      // width: fluid(720, 400);
+      width: 100%;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
 
     &-left--desc {
-      padding: rem(24) 0 rem(64);
+      padding: fluid(24, 10) 0 fluid(64, 16);
     }
 
     &-right {
       background-image: url(./../img/hero-bg.svg);
-      width: 630px;
-      height: 909px;
-      object-fit: cover;
+      width: fluid(630, 310);
+      height: fluid(909, 500);
+      // width: 630px;
+      // height: 909px;
+      background-size: cover;
       background-repeat: no-repeat;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: rem(20);
-    margin-top: rem(100);
+    margin-top: fluid(100, 20);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(20);
+    }
   }
 
   &__card {
-    // border-image: url(./../../img/border-card.svg);
     border: 2px solid var(--accent);
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    padding: rem(40) rem(35) rem(90);
+    padding: fluid(40, 15) fluid(35, 10) fluid(90, 50);
     display: flex;
     flex-direction: column;
     align-items: center;
-    // height: rem(230);
     position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #3040d3;
+      border-left: 1px solid #3040d3;
+      width: 44px;
+      height: 44px;
+      right: 5%;
+      top: 5%;
+      transform: rotate(-180deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid #3040d3;
+      border-left: 1px solid #3040d3;
+      width: 44px;
+      height: 44px;
+      left: 5%;
+      bottom: 5%;
+      transition: bottom ease 0.5s;
+    }
   }
 
   &__buttons {
@@ -56,5 +104,9 @@
   bottom: 14px;
   right: 14px;
   margin-top: auto;
-  align-self: flex-end;
+
+  @include mobile-s {
+    width: 28px;
+    height: 28px;
+  }
 }

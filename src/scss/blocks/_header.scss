@@ -15,10 +15,20 @@
   &__list {
     display: flex;
     column-gap: rem(24);
+
+    &-link {
+      transition: 0.5s;
+
+      &:hover {
+        color: #3410ff;
+        text-shadow: 0 0 5px #2727cb;
+      }
+    }
   }
 }
 
-.header__nav {
+.header__nav,
+.header .button-blue {
   @include tablet {
     display: none;
   }

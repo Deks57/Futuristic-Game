@@ -18,6 +18,7 @@ h2 {
 
 .title-3,
 h3 {
+  font-family: var(--font-family);
   font-weight: 400;
   @include fluid-text(24, 16);
   line-height: 150%;
@@ -25,6 +26,7 @@ h3 {
 
 .title-4,
 h4 {
+  font-family: var(--second-family);
   font-weight: 400;
   @include fluid-text(21, 15);
   line-height: 150%;
@@ -32,6 +34,7 @@ h4 {
 
 .title-5,
 h5 {
+  font-family: var(--font-family);
   font-weight: 400;
   @include fluid-text(18, 14);
   line-height: 150%;
@@ -40,6 +43,7 @@ h5 {
 
 .title-6,
 h6 {
+  font-family: var(--font-family);
   font-weight: 400;
   @include fluid-text(16, 14);
   line-height: 120%;
@@ -48,6 +52,7 @@ h6 {
 
 .desc,
 p {
+  font-family: var(--second-family);
   font-weight: 400;
   @include fluid-text(21, 16);
   line-height: 150%;

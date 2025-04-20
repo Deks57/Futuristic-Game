@@ -7,15 +7,15 @@
 		<title>Стартовый шаблон | ВебКадеми</title>
 		<link rel="stylesheet" href="./css/main.css" />
 
-		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
-		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+		<link rel="icon" type="image/x-icon" href="/img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png" />
 	</head>
 
 	<body>
 		<header class="header">
 			<div class="container-average">
 				<div class="header__row">
-					<img src="./img/logo.svg" width="237" height="40" alt="" />
+					<img src="/img/logo.svg" width="202" height="40" alt="" />
 					<nav class="header__nav nav">
 						<ul class="nav__list">
 							<li class="nav__list-item">
@@ -30,15 +30,22 @@
 						</ul>
 					</nav>
 					<button class="button-blue">Buy Game</button>
-					<button class="mobile-nav-btn"></button>
+
+					<button class="burger-button" aria-label="Open menu" title="Open menu">
+						<span class="burger-button__line"></span>
+						<span class="burger-button__line"></span>
+						<span class="burger-button__line"></span>
+					</button>
 				</div>
 			</div>
-			<img src="./img/header-line.svg" alt="" class="header-line" />
+			<img src="/img/header-line.svg" alt="" class="header-line" />
 		</header>
 		<div class="mobile-nav">
 			<ul class="mobile-nav__list">
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="docs.html">Документация</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="docs.html">About</a></li>
+				<li><a href="docs.html">Contact Us</a></li>
+				<button class="button-blue">Buy Game</button>
 			</ul>
 		</div>
 
@@ -57,22 +64,23 @@
 							</div>
 							<div class="hero__cards">
 								<div class="hero__card">
-									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
 									<div class="card__desc title-5">Gameplay and Features</div>
-									<img src="./img/arrow-right.svg" class="card__arrow" width="32" height="32" alt="" />
+									<img src="/img/arrow-right.svg" class="card__arrow" width="32" height="32" alt="" />
 								</div>
 								<div class="hero__card">
-									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
 									<div class="card__desc title-5">Items and Collectibles</div>
-									<img src="./img/arrow-right.svg" class="card__arrow" width="32" height="32" alt="" />
+									<img src="/img/arrow-right.svg" class="card__arrow" width="32" height="32" alt="" />
 								</div>
 								<div class="hero__card">
-									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
 									<div class="card__desc title-5">Heroes and Game Locations</div>
-									<img src="./img/arrow-right.svg" class="card__arrow" width="32" height="32" alt="" />
+									<img src="/img/arrow-right.svg" class="card__arrow" width="32" height="32" alt="" />
 								</div>
 							</div>
 						</div>
+						<!-- <img src="/img/hero-bg.svg" class="image" width="630" height="909" alt="hero-bg" /> -->
 						<div class="hero__body-right"></div>
 					</div>
 				</div>
@@ -89,7 +97,7 @@
 						<div class="information__cards">
 							<div class="information__cards-left">
 								<div class="information__card">
-									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
 									<div class="information__card-title title-4">
 										Intense Survival Gameplay
 									</div>
@@ -99,7 +107,7 @@
 									</div>
 								</div>
 								<div class="information__card">
-									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
 									<div class="information__card-title title-4">
 										Tactical Combat and Customization
 									</div>
@@ -110,9 +118,9 @@
 								</div>
 							</div>
 							<div class="information__cards-right">
-								<img loading="lazy" src="./img/information-img.png" class="image" width=685" height="888" alt="" />
+								<img class="information-bg" loading="lazy" src="/img/information-img.png" class="image" width=685" height="888" alt="" />
 								<div class="information__card">
-									<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+									<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
 									<div class="information__card-title title-4">
 										Cooperative Multiplayer
 									</div>
@@ -134,54 +142,58 @@
 						Witness the rise of&#160;unlikely heroes who defy the odds and challenge fate.
 					</p>
 					<div class="legends__cards">
-						<div class="legends__card legends__card-1">
+						<div class="legends__cards-last">
+							<div class="legends__card">
+								<picture>
+									<source srcset="/img/legends-img.webp 1x, /img/legends-img@2x.webp 2x" type="image/webp" />
+									<source srcset="/img/legends-img.png 1x, /img/legends-img@2x.png 2x" type="image/png" />
+									<img loading="lazy" src="/img/legends-img.png" class="legends__card-img" width="374" height="422" alt="img" />
+								</picture>
+								<div class="legends__card-title">
+									MALCOLM
+								</div>
+							</div>
+							<div class="legends__card">
+								<picture>
+									<source srcset="/img/legends-img.webp 1x, /img/legends-img@2x.webp 2x" type="image/webp" />
+									<source srcset="/img/legends-img.png 1x, /img/legends-img@2x.png 2x" type="image/png" />
+									<img loading="lazy" src="/img/legends-img.png" class="legends__card-img" width="374" height="422" alt="img" />
+								</picture>
+								<div class="legends__card-title">
+									MALCOLM
+								</div>
+							</div>
+						</div>
+						<div class="legends__card">
 							<picture>
-								<source srcset="./img/legends-img.webp 1x, ./img/legends-img@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/legends-img.png 1x, ./img/legends-img@2x.png 2x" type="image/png" />
-								<img loading="lazy" src="./img/legends-img.png" class="image" width="374" height="422" alt="img" />
+								<source srcset="/img/legends-img.webp 1x, /img/legends-img@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/legends-img.png 1x, /img/legends-img@2x.png 2x" type="image/png" />
+								<img loading="lazy" src="/img/legends-img.png" class="legends__card-img" width="374" height="422" alt="img" />
 							</picture>
 							<div class="legends__card-title">
 								MALCOLM
 							</div>
 						</div>
-						<div class="legends__card legends__card-2">
-							<picture>
-								<source srcset="./img/legends-img.webp 1x, ./img/legends-img@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/legends-img.png 1x, ./img/legends-img@2x.png 2x" type="image/png" />
-								<img loading="lazy" src="./img/legends-img.png" class="image" width="374" height="422" alt="img" />
-							</picture>
-							<div class="legends__card-title">
-								MALCOLM
+						<div class="legends__cards-last">
+							<div class="legends__card">
+								<picture>
+									<source srcset="/img/legends-img.webp 1x, /img/legends-img@2x.webp 2x" type="image/webp" />
+									<source srcset="/img/legends-img.png 1x, /img/legends-img@2x.png 2x" type="image/png" />
+									<img loading="lazy" src="/img/legends-img.png" class="legends__card-img" width="374" height="422" alt="img" />
+								</picture>
+								<div class="legends__card-title">
+									MALCOLM
+								</div>
 							</div>
-						</div>
-						<div class="legends__card legends__card-3">
-							<picture>
-								<source srcset="./img/legends-img.webp 1x, ./img/legends-img@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/legends-img.png 1x, ./img/legends-img@2x.png 2x" type="image/png" />
-								<img loading="lazy" src="./img/legends-img.png" class="image" width="374" height="422" alt="img" />
-							</picture>
-							<div class="legends__card-title">
-								MALCOLM
-							</div>
-						</div>
-						<div class="legends__card legends__card-4">
-							<picture>
-								<source srcset="./img/legends-img.webp 1x, ./img/legends-img@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/legends-img.png 1x, ./img/legends-img@2x.png 2x" type="image/png" />
-								<img loading="lazy" src="./img/legends-img.png" class="image" width="374" height="422" alt="img" />
-							</picture>
-							<div class="legends__card-title">
-								MALCOLM
-							</div>
-						</div>
-						<div class="legends__card legends__card-5">
-							<picture>
-								<source srcset="./img/legends-img.webp 1x, ./img/legends-img@2x.webp 2x" type="image/webp" />
-								<source srcset="./img/legends-img.png 1x, ./img/legends-img@2x.png 2x" type="image/png" />
-								<img loading="lazy" src="./img/legends-img.png" class="image" width="374" height="422" alt="img" />
-							</picture>
-							<div class="legends__card-title">
-								MALCOLM
+							<div class="legends__card">
+								<picture>
+									<source srcset="/img/legends-img.webp 1x, /img/legends-img@2x.webp 2x" type="image/webp" />
+									<source srcset="/img/legends-img.png 1x, /img/legends-img@2x.png 2x" type="image/png" />
+									<img loading="lazy" src="/img/legends-img.png" class="legends__card-img" width="374" height="422" alt="img" />
+								</picture>
+								<div class="legends__card-title">
+									MALCOLM
+								</div>
 							</div>
 						</div>
 					</div>
@@ -203,7 +215,33 @@
 					</div>
 					<div class="prise__cards">
 						<div class="prise__card">
-							<img src="./img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+							<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
+							<div class="prise__card-top">
+								<h3 class="prise__card-title">Basic Plan</h3>
+								<div class="prise__card-info">
+									Survivor&#8217;s Starter Pack
+								</div>
+							</div>
+							<div class="prise__card-prise">$29.99/mo</div>
+							<button class="button-blue">Buy Game</button>
+							<nav class="prise__card-nav">
+								<ul class="prise__card-list">
+									<li class="prise__card-item">
+										Access to&#160;the full game with all core features.
+									</li>
+									<li class="prise__card-item">Single-player mode available.</li>
+									<li class="prise__card-item">
+										Limited selection of&#160;character customization options.
+									</li>
+									<li class="prise__card-item">
+										Exclusive in-game items: &#171;Rookie&#8217;s Rations&#187; supply pack.
+									</li>
+									<li class="prise__card-item">Feature text goes here</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="prise__card">
+							<img src="/img/hero__icon-1.svg" class="image" width="40" height="40" alt="" />
 							<div class="prise__card-top">
 								<h3 class="prise__card-title">Basic Plan</h3>
 								<div class="prise__card-info">
@@ -367,23 +405,25 @@
 							</button>
 						</form>
 					</div>
-					<div class="footer__follow">
-						<h3 class="title-6">Follow Us</h3>
-						<div class="footer__follow-images">
-							<div class="footer__follow-img">
-								<img loading="lazy" src="./img/instagram.svg" class="image" width="16" height="16" alt="instagram" />
-							</div>
-							<div class="footer__follow-img">
-								<img loading="lazy" src="./img/faceboock.svg" class="image" width="9" height="16" alt="instagram" />
-							</div>
-							<div class="footer__follow-img">
-								<img loading="lazy" src="./img/twitter.svg" class="image" width="16" height="13" alt="instagram" />
+					<div class="footer__feedbacks">
+						<div class="footer__follow">
+							<h3 class="title-6">Follow Us</h3>
+							<div class="footer__follow-images">
+								<div class="footer__follow-img">
+									<img loading="lazy" src="./img/instagram.svg" class="image" width="16" height="16" alt="instagram" />
+								</div>
+								<div class="footer__follow-img">
+									<img loading="lazy" src="./img/faceboock.svg" class="image" width="9" height="16" alt="instagram" />
+								</div>
+								<div class="footer__follow-img">
+									<img loading="lazy" src="./img/twitter.svg" class="image" width="16" height="13" alt="instagram" />
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="footer__feedback">
-						<h3 class="title-6">Contact Us</h3>
-						<h3 class="title-6">+1 800 854-36-80</h3>
+						<div class="footer__feedback">
+							<h3 class="title-6">Contact Us</h3>
+							<h3 class="footer__feedback-number">+1 800 854-36-80</h3>
+						</div>
 					</div>
 				</div>
 				<div class="footer__sos1al">

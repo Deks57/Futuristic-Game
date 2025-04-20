@@ -2,17 +2,33 @@
   &-blue {
     background-color: #3040d3;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    // width: 100%;
-    padding: rem(10) rem(50);
     color: #fff;
-    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 90% 100%, 0% 100%);
+    // clip-path: polygon(0% 0%, 100% 0, 100% 75%, 95% 100%, 0% 100%);
+    width: fluid(202, 150);
+    height: rem(40);
+    transition: all 0.35s;
+
+    &:hover {
+      transform: translateY(-0.25em);
+      box-shadow: 0 4px 12px 0 #262f81;
+    }
   }
 
   &-opasity {
-    border: 1px solid #3040d3;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    padding: rem(10) rem(50);
+    // background-image: url("./../../img/button-border.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: fluid(202, 150);
     color: #3040d3;
+    position: relative;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.35s;
+
+    &:hover {
+      transform: translateY(-0.25em);
+      box-shadow: 0 4px 12px 0 #262f81;
+    }
   }
 
   &-white {
@@ -24,5 +40,11 @@
     background: #fff;
     color: #000;
     padding: rem(16) rem(26);
+    transition: all 0.35s;
+
+    &:hover {
+      transform: translateY(-0.25em);
+      box-shadow: 0 4px 12px 0 #262f81;
+    }
   }
 }
